@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eek</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main-box" id="mainBox">
+
+    <div class="grid-container">
+        
+        <h2 class="crit-title">criticism excerpts</h2>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('first-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text"></p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('second-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text second-class"></p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('third-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text third-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('fourth-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text fourth-class">Placeholder text - this will be replaced</p>
+                </div>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('fifth-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text fifth-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('sixth-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text sixth-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('seventh-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text seventh-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('eighth-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text eighth-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('ninth-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text ninth-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('tenth-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text tenth-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('eleventh-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text eleventh-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+
+            <div id="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showArticle('twelfth-class')">
+                <div class="scroll-box">
+                    <p class="bubble_text twelfth-class">Placeholder text - this will be replaced</p>
+                </div></button>
+            </div>
+        </div>
+    </div>
+    <div class="hidevid" id="videoContainer">
+        <video autoplay controls plays-inline class="fullscreen-video">
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+    </div>
+    
+    <div class="main-box" id="box2">
+        <h2 class="crit-title">article</h2>
+        <div class="article-text-box">
+        <p class="article-text">THIS TEXT WILL BE REPLACED!!!!</p>
+    </div>
+
+
+
+
+
+
+
+    <div class="interview-box" id="interviewBox">
+        <h2 class="interview-title">Interview Excerpts</h2>
+    
+        <div class="grid-container">
+            <div class="grid-item">
+                <button class="btn_box" onclick="moveBoxes(); showInterview('first-class')">
+                    <div class="scroll-box">
+                        <p class="bubble_text"></p>
+                    </div>
+                </button>
+            </div>
+            <!-- Repeat similar structure for other interview excerpts -->
+            <!-- Replace placeholders with your actual content -->
+        </div>
+    </div>
+    
+    <div class="main-box" id="box2">
+        <h2 class="interview-title">Interview Article</h2>
+        <div class="interview-text-box">
+            <p class="interview-text">This text will be replaced with interview content!</p>
+        </div>
+    </div>
+
+
+      </div>
+<div class="menu">
+    <div class="jiggle">
+    <button class = "crit_btn" onclick="toggleBox()">criticism</button>
+</div>
+<div class="jiggle">
+    <button class = "cinema_btn" onclick="toggleCinema()">cinema</button>
+</div>
+<div class="jiggle">
+    <button class = "info_btn" onclick="toggleInfo()">information</button>
+    <div class="hide" id="infoContent">
+        <h2>information</h2>
+        I am shown when someone hovers over the div above.   
+    </div>
+</div>
+<div class="jiggle">
+    <button class = "interview_btn" onclick="toggleInterviewBox()">interviews</button>
+</div>
+<div class="jiggle">
+    <button class = "random_btn" onclick="">???</button>
+</div>
+<div class="jiggle">
+    <div class="article_box" id="articleBox"></div>
+</div>
+<div class="video-player" id="videoPlayer">
+    <div class="video-container">
+        <video id="videoPlayerElement" controls>
+            <source src="movie.mp4" type="video/mp4" title="Title of first video">
+            <source src="vid2.mp4" type="video/mp4" title="Title of 2nd video">
+            Your browser does not support the video tag.
+        </video>
+        <div class="tooltip" id="tooltipText">Title of film goes here</div>
+        <button class="prev-btn" onclick="prevVideo()">&lt;</button>
+        <button class="next-btn" onclick="nextVideo()">&gt;</button>
+        <button class="close-btn" onclick="closeVideoPlayer()"></button>
+    </div>
+    
+</div>
+</body>
+</html>

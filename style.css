@@ -1,0 +1,455 @@
+html {
+    background: #ffffff;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-box {
+    position: absolute;
+    width: 50%;
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 70px;
+    background-color: #ffff3d;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translateY(100%);
+    opacity: 0;
+    left:20%;
+}
+
+@media screen and (max-width: 800px) {
+    .main-box {
+        width: 100%;
+        margin-top: 10px;
+        left: 0;
+    }
+}
+
+/* Active state for the main box */
+.main-box.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Style for the grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+}
+
+/* Style for grid items */
+#grid-item {
+    background-color: #ffffff;
+    border-radius: 100px;
+
+}
+
+
+
+h2 {
+    text-align: left;
+    font-family: Helvetica;
+    padding-bottom: 2rem;
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 2%;
+    font-weight: bold;
+}
+
+button {
+  font-family: Helvetica;
+  background-color: transparent;
+  border: none;
+  cursor:pointer;
+}
+
+  
+  button {
+    font-size: 3rem;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .jiggle:hover button {
+    animation: jiggle 0.5s ease-in-out;
+  }
+
+  .jiggle {
+    z-index: -1;
+  }
+
+
+@keyframes jiggle {
+    0% {
+      transform: rotate(-2deg);
+    }
+    25% {
+      transform: rotate(2deg);
+    }
+    50% {
+      transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+      }
+      100% {
+        transform: rotate(-2deg);
+      }
+  }
+
+button {
+  display: block;
+  font-size: 30px;
+}
+
+.article_box {
+  position: absolute;
+  background-color: green;
+  padding: 10rem;
+  width: 50%;
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 70px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.bubble_text {
+    position: absolute;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+#grid-item {
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden; /* Ensure content stays within bounds */
+    padding-inline:0%;
+    padding-top: 2.5%;
+    padding-bottom: 5%;
+    font-family: Helvetica;
+    margin-inline: 20px;
+}
+
+#grid-item {
+  display: flex;
+  align-items: center;
+  /* Additional styling for the scroll-box if needed */
+}
+
+/* Adjustments to the text */
+.bubble_text {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    #grid-item {
+        padding-bottom: 10%;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    #grid-item {
+        position: relative;
+        background-color: #ffffff;
+        border-radius: 50px;
+        overflow: hidden; /* Ensure content stays within bounds */
+        padding-inline:0%;
+        padding-bottom: 10%;
+        font-family: Helvetica;
+        border: solid 1px;
+        z-index: 10;
+        margin-inline: -10px;
+    }
+}
+
+.menu {
+    position: fixed; /* Set the navbar to fixed position */
+    width: 100%; /* Full width */
+    z-index: -1;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hide-box {
+  display: none;
+}
+
+
+#infoContent {
+  position: fixed;
+  display: none;
+  color: black;
+  font-family: Helvetica;
+  padding: 40px;
+  background-color: greenyellow;
+  border-radius: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999999;
+}
+
+
+
+  .hidevid {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    margin-right: 1.5rem;
+    z-index: -100;
+  }
+
+  .fullscreen-video {
+    position: absolute;
+    width: 100%;
+  }
+
+  .dark {
+    color: white;
+    font-size: 24px;
+  }
+
+  .darkback {
+    background-color: black;
+  }
+
+  .crit-title {
+    padding-left: 3%;
+    padding-bottom: 1rem;
+    font-size: 30px;
+  }
+
+  /* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+.scroll-box {
+    /* Container for horizontal scrolling */
+    overflow: hidden; /* Hide content exceeding the box */
+    white-space: nowrap; /* Keep content in a single line */
+}
+
+.scroll-box:hover .bubble_text {
+    /* Text inside scroll box */
+    animation: scrollText 200s linear infinite; /* Adjust duration and other parameters */
+    cursor: pointer;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%); /* Move text to left */
+    }
+}
+.container {
+  position: relative;
+}
+
+.main-box {
+  position: absolute;
+  width: 50%;
+  padding: 35px;
+  border-radius: 70px;
+  background-color: #bdff2e;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 50; /* Z-index applied to both main boxes */
+}
+
+#mainBox,
+#box2 {
+  display: block;
+}
+
+#mainBox {
+  transform: translate(10%, 0);
+  top: 50px;
+}
+
+#box2 {
+  transform: translate(109%, 10%);
+  top: 50px;
+}
+
+#box2 {
+  opacity: 0; 
+}
+
+#box2.active {
+  opacity: 0.5; 
+}
+
+
+/* Active state for the main box */
+.main-box.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.article-text {
+  font-family: Helvetica Neue;
+  padding-inline: 4%;
+  font-size: 15px;
+  line-height: 35px;
+}
+
+.article-text-box {
+  background-color: white;
+  padding-top: 4%;
+  padding-bottom:4%;
+  border-radius: 40px;
+  padding-inline: 2%;
+  margin-top: 2%;
+}
+
+
+.hidevid {
+  opacity: 0;
+}
+
+.video-player {
+  display: none;
+  opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.video-player.active {
+    display: block;
+    opacity: 1;
+}
+  /* Add other styles for the video player container */
+
+
+#videoPlayerElement {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100000000; /* Put the video player behind other elements */
+    background-color: black;
+}
+
+body {
+  overflow-y: auto; /* Disables vertical scrolling */
+  overflow-x: hidden; /* Enables horizontal scrolling */
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 450%;
+    width: 100px; /* Set width of the buttons */
+    height: 40px; /* Set height of the buttons */
+    color: white; /* Example text color */
+    font-size: 30px; /* Example font size */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    filter: drop-shadow(0.5);
+}
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 50px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 68px;
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0.5);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn:before,
+.close-btn:after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: white;
+}
+
+.close-btn:before {
+  transform: rotate(45deg);
+}
+
+.close-btn:after {
+  transform: rotate(-45deg);
+}
+
+.close-btn:hover:before,
+.close-btn:hover:after {
+  background-color: yellow; /* Example color on hover */
+}
+
+.tooltip {
+  position: absolute;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 999999999999999999;
+  font-family: Arial, Helvetica, sans-serif;
+  filter: drop-shadow(0.5);
+}
+
+.jiggle button {
+  /* Other existing styles */
+  transition: color 0.5s ease-in-out; /* Add transition for color change */
+}
+
